@@ -1,6 +1,5 @@
 ## Day 1
 
-
 # Part 1 -----------------------------------------------------------------
 
 input <- read.table("2024/input/test.txt", header = F)
@@ -15,6 +14,10 @@ input$V2 <- sort(input$V2)
 
 # absolute value of difference between left and right
 dist <- sum(abs(input$V1 - input$V2))
+dist # answer
+
+
+# Part 2 -----------------------------------------------------------------
 
 # This time, you'll need to figure out exactly how often each number from
 # the left list appears in the right list. Calculate a total similarity score
@@ -26,4 +29,4 @@ for(i in seq_along(input$V1)) {
 }
 
 # multiply left input by number of matches in right
-sum(input$V1 * input$matches)
+sum(input$V1 * input$matches) # answer
